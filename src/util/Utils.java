@@ -11,8 +11,12 @@ import java.nio.IntBuffer;
 import org.lwjgl.BufferUtils;
 
 public class Utils {
-	public static String GetShaderDir() {
+	public static String GetShadersDir() {
 		return "res/shaders/";
+	}
+	
+	public static String GetTexturesDir() {
+		return "res/textures/";
 	}
 	
 	public static String LoadFile(String path) {

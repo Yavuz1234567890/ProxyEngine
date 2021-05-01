@@ -13,10 +13,10 @@ public class Shader {
 	public Shader(String fileName) {
 		program = new ShaderProgram();
 		vertex = new shader.Shader(GL20.GL_VERTEX_SHADER);
-		vertex.Load(Utils.LoadFile(Utils.GetShaderDir() + fileName + ".vert"));
+		vertex.Load(Utils.LoadFile(Utils.GetShadersDir() + fileName + ".vert"));
 		vertex.ShowErrors();
 		fragment = new shader.Shader(GL20.GL_FRAGMENT_SHADER);
-		fragment.Load(Utils.LoadFile(Utils.GetShaderDir() + fileName + ".frag"));
+		fragment.Load(Utils.LoadFile(Utils.GetShadersDir() + fileName + ".frag"));
 		fragment.ShowErrors();
 		program.AddShader(vertex, fragment);
 		program.Link();
