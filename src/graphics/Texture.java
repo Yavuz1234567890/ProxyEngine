@@ -22,8 +22,8 @@ public class Texture {
 		int width = w.get();
 		int height = h.get();
 		
-		texture = new shader.Texture(width, height);
-		texture.Create(data);
+		texture = new shader.Texture(data, width, height);
+		texture.Create();
 		
 		stbi_image_free(data);
 	}
